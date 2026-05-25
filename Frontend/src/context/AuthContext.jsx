@@ -1,12 +1,12 @@
-import { useState } from "react";
-import AuthContext from '@/hooks/useAuth';
+import { createContext, useState } from "react";
 import { setStorage, removeStorage, getStorage } from "@/utils/storage";
 
+export const AuthContext = createContext(null);
 
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(getStorage("user") || null);
     const [token ,setToken] = useState(getStorage("token") || null);
-    const [loading] = useState(true);
+    const [loading] = useState(false);
 
 
     const login = (userData, userToken) => {

@@ -18,7 +18,7 @@ const AdminRoute = () => {
         );
     }
 
-    if (user?.role !== "admin") {
+    if (user?.role?.toLowerCase() !== "admin") {
         return (
             <Navigate
                 to="/unauthorized"

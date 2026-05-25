@@ -40,6 +40,7 @@ const AppRoutes = () => {
                 <Route path="/register" element={<Register />} />
                 <Route path="/forgotpassword" element={<ForgotPassword />} />
                 <Route path="/resetPassword" element={<ResetPassword />} />
+                <Route path="/reset-password/:token" element={<ResetPassword />} />
             </Route>
 
             <Route path='/' element={<Home />} />

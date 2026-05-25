@@ -1,5 +1,6 @@
-import { useState } from "react";
-import TaskContext from '@/hooks/useTasks';
+import { createContext, useState } from "react";
+
+export const TaskContext = createContext(null);
 
 const TaskProvider = ({ children }) => {
     const [tasks, setTasks] = useState([]);

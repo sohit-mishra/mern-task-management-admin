@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 import { getStorage, setStorage } from '@/utils/storage';
-import {ThemeContext } from '@/hooks/useTheme';
+
+export const ThemeContext = createContext(null);
 
 const ThemeProvider = ({ children }) => {
     const [theme, setTheme] = useState(getStorage('theme') || 'light');
