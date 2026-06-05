@@ -15,10 +15,14 @@ const Login = () => {
     try {
       setLoading(true);
       const response = await loginUser(form);
-      const token = response.data;
-      login({ email: form.email, name: form.email.split("@")[0], role: "User" }, token);
+      const token = response.data.token;
+      login({ email: form.email, name: form.email.split("@")[0], role: response.data.role }, token);
       successToast(response.message || "Login successful");
-      navigate("/dashboard");
+      if(response.data.role === "Admin"){
+          navigate("/admin/dashboard");
+      }else{
+         navigate("/dashboard");
+      }
     } catch (error) {
       errorToast(error.message);
     } finally {

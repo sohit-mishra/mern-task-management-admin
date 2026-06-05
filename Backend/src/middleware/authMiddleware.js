@@ -10,8 +10,8 @@ const protect = async(req,res,next)=>{
             unAuthorizedResponse();
         }
 
-        const decoded = jwt.verify(decoded, env.JWT_SECRET);
-        req.user = await User.findById(decoded.id).select("-password");
+        const decoded = jwt.verify(token, env.JWT_SECRET);
+        req.user = await User.findById(decoded.id).select("-password -resetPasswordToken -resetPasswordExpire");
         next();
     } catch (error) {
         errorResponse();

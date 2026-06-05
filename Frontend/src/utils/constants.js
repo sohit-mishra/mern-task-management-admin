@@ -1,6 +1,6 @@
 export const USER_ROLES = {
-    ADMIN :"admin",
-    User:'user',
+    ADMIN :"Admin",
+    User:'User',
 }
 
 export const TASK_STATUS = {

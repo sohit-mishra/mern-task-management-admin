@@ -36,10 +36,6 @@ export default function ResetPassword() {
           <h1 className="text-2xl font-semibold">Reset Password</h1>
           <form className="space-y-4" onSubmit={handleSubmit}>
             <div className="space-y-2">
-              <Label>Reset Token</Label>
-              <Input name="token" required value={form.token} onChange={update} />
-            </div>
-            <div className="space-y-2">
               <Label>New Password</Label>
               <Input name="password" type="password" required value={form.password} onChange={update} />
             </div>

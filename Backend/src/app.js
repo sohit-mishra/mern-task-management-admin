@@ -1,11 +1,13 @@
 const express = require("express");
 const cors = require("cors");
 const env = require('./config/env');
+const db = require('./config/db');
 
 const errorHandle = require("./middleware/errorMiddleware");
 const allRoutes = require("./routes/index");
 
 const app = express();
+db();
 
 app.use(
   cors({

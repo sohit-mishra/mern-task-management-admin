@@ -7,12 +7,17 @@ const PublicRoute = () => {
     if (user) {
         return (
             <Navigate
-                to="/dashboard"
+                to={
+                    user.role === "Admin"
+                        ? "/admin/dashboard"
+                        : "/dashboard"
+                }
                 replace
             />
         );
     }
+
     return <Outlet />;
-}
+};
 
 export default PublicRoute;
