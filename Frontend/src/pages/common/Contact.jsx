@@ -7,7 +7,7 @@ export default function Contact() {
     <div className="min-h-screen bg-background">
       <PublicNavbar />
 
-      <main className="min-h-[calc(90vh-56px)] flex items-center justify-center px-4 py-12">
+      <main className="min-h-[calc(100vh-56px)] flex items-center justify-center px-4 py-12">
         <div className="w-full max-w-3xl rounded-2xl border bg-card p-8 shadow-sm">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight">

@@ -12,7 +12,7 @@ export default function About() {
     <div className="min-h-screen bg-background">
       <PublicNavbar />
 
-      <main className="min-h-[calc(90vh-56px)] px-4 py-12">
+      <main className="min-h-[calc(100vh-56px)] px-4 py-12">
         <div className="mx-auto max-w-6xl">
           {/* Hero Section */}
           <div className="text-center">

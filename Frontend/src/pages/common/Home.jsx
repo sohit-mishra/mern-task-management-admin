@@ -18,7 +18,7 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       <PublicNavbar />
 
-      <main className="min-h-[calc(100vh-56px)]">
+      <main className="min-h-[calc(90vh-56px)]">
         {/* Hero Section */}
         <section className="mx-auto max-w-7xl px-4 py-20">
           <div className="grid items-center gap-12 lg:grid-cols-2">
